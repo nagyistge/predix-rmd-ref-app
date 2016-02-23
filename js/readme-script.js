@@ -25,6 +25,7 @@
     var search = new RegExp('src="images/', 'g');
     html = html.replace(search, 'src="https://raw.githubusercontent.com/' + REPO + '/master/images/');
     document.getElementById( 'readme' ).innerHTML = html;
+    document.title = $('h1').text();
   }
 
   function getResource( url, clbk ) {
