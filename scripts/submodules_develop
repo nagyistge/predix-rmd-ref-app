@@ -1,0 +1,59 @@
+git status
+
+git submodule deinit -f predix-scripts
+git submodule deinit -f predix-sdks
+git submodule deinit -f Predix-HelloWorld-WebApp
+git submodule deinit -f data-seed-service
+git submodule deinit -f dataingestion-service
+git submodule deinit -f machinedata-simulator
+git submodule deinit -f rmd-datasource
+git submodule deinit -f fdh-router-service
+git submodule deinit -f rmd-analytics
+git submodule deinit -f rmd-orchestration
+git submodule deinit -f rmd-ref-app-ui
+git submodule deinit -f predix-websocket-server
+
+git rm -f predix-scripts
+git rm -f predix-sdks
+git rm -f Predix-HelloWorld-WebApp
+git rm -f data-seed-service
+git rm -f dataingestion-service
+git rm -f machinedata-simulator
+git rm -f rmd-datasource
+git rm -f fdh-router-service
+git rm -f rmd-analytics
+git rm -f rmd-orchestration
+git rm -f rmd-ref-app-ui
+git rm -f predix-websocket-server
+
+rm -rf .git/modules/predix-scripts.git
+rm -rf .git/modules/predix-sdks.git
+rm -rf .git/modules/Predix-HelloWorld-WebApp
+rm -rf .git/modules/data-seed-service
+rm -rf .git/modules/dataingestion-service
+rm -rf .git/modules/machinedata-simulator
+rm -rf .git/modules/rmd-datasource
+rm -rf .git/modules/fdh-router-service
+rm -rf .git/modules/rmd-analytics
+rm -rf .git/modules/rmd-orchestration
+rm -rf .git/modules/rmd-ref-app-ui
+rm -rf .git/modules/predix-websocket-server
+
+git status
+git submodule add -b develop git@github.build.ge.com:adoption/predix-scripts.git
+git submodule add -b develop git@github.build.ge.com:adoption/predix-sdks.git
+git submodule add -b develop git@github.build.ge.com:adoption/Predix-HelloWorld-WebApp.git
+git submodule add -b develop git@github.build.ge.com:adoption/data-seed-service.git
+git submodule add -b develop git@github.build.ge.com:adoption/dataingestion-service.git
+git submodule add -b develop git@github.build.ge.com:adoption/machinedata-simulator.git
+git submodule add -b develop git@github.build.ge.com:adoption/rmd-datasource.git
+git submodule add -b develop git@github.build.ge.com:adoption/fdh-router-service.git
+git submodule add -b develop git@github.build.ge.com:adoption/rmd-analytics.git
+git submodule add -b develop git@github.build.ge.com:adoption/rmd-orchestration.git
+git submodule add -b develop git@github.build.ge.com:adoption/rmd-ref-app-ui.git
+git submodule add -b develop git@github.build.ge.com:adoption/predix-websocket-server.git
+
+git status
+git commit -m "put back submodules"
+git status
+git push
