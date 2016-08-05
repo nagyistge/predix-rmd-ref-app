@@ -59,6 +59,11 @@ The UI accesses data from Predix Asset directly which drives the Asset selector 
 
 <img src='images/RefApp-VisualizationFlow.png' width=600 height=400>
 
+###Analytics Flow		
+Data arrives via the Ingestion Flow and is stored.  A message is placed in a queue which kicks off an Analytic Orchestration.  The Analytics uses data from Predix Asset and Predix Timeseries, produces a result, which is then stored back to Predix Asset or Predix Timeseries or potentially to/from any other datastore.		
+		
+<img src='images/RefApp-AnalyticsFlow.png' >		
+
 ##Getting Acquainted with Reference App
 
 Go through the following tutorial to get acquainted with Predix RMD Reference application.
